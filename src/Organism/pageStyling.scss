@@ -1,0 +1,27 @@
+
+@import '../Style//mixins';
+
+
+.home-wrapper{
+    padding-top: 100px;
+    @include respond-to('mobile'){
+        padding-top: 75px;
+    }
+}
+.ai-doctor-container{
+    background: rgb(0,0,0);
+    padding-top: 80px;
+    @include respond-to('mobile'){
+        padding-top: 60px;
+    }
+}
+
+.ai-booth-page{
+    background: #020F19;
+    padding-top: 85px;
+}
+
+.about-us-wrapper{
+    margin-top: 100px;
+}
+

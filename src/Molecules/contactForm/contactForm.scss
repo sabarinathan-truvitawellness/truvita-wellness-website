@@ -1,0 +1,19 @@
+  @import '../../Style/mixins';
+
+  .form-container {
+    
+    flex: 1; /* Allow form container to take available space */
+    max-width: 100%; /* Ensure the form stretches */
+
+    .custom-button{
+        background-color: rgb(95, 188, 254);
+        border-radius: 25px;
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .form-title-content{
+         @include font(32px,600,rgba(35, 44, 43, 0.75));
+         padding-bottom: 10px;
+    }
+  }

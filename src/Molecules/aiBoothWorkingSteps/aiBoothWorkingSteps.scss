@@ -1,0 +1,26 @@
+@import '../../Style//mixins';
+
+.ai-Booth-Working-container{
+    width: 100%;
+    .ai-booth-working-title{
+        text-align: center;
+        color: #FFF;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        @include respond-to('mobile'){
+            color: #FFF;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+       
+
+    }
+    .ai-booth-working-container-wrapper{
+        padding: 20px;
+    }
+}

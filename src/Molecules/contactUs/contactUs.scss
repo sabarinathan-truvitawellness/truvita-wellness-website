@@ -1,0 +1,73 @@
+@import '../../Style/mixins';  // Importing mixins for typography
+
+.contactus-container {
+    padding-bottom: 50px;
+    
+    .contactus-wrapper {
+        max-width: 1200px;
+        margin: auto;
+
+        .content-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+
+            @include respond-to('mobile'){
+                display: block;
+            }
+
+            .left-section {
+                max-width: 50%;
+
+                .left-section-wrapper {
+                    .content-row-1 {
+                        margin-bottom: 12px;
+
+                        .contact-content-1 {
+                            @include font(24px, 600, rgba(44, 49, 57, 0.50));
+                        }
+                    }
+
+                    .content-row-2 {
+                        max-width: 500px;
+                        margin-bottom: 40px;
+
+                        .contact-content-2 {
+                            @include font(32px, 700, #0FC0ED);
+                        }
+                    }
+
+                    .content-row-3 {
+                        max-width: 500px;
+
+                        .contact-content-3 {
+                            @include font(20px, 400, #232C2B);
+                        }
+                    }
+                }
+            }
+
+            .right-section {
+                max-width: 50%;
+
+                .right-section-wrapper {
+                    .image-container {
+                        .image {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            @include respond-to('mobile'){
+                .left-section{
+                    max-width: 100%;
+                }
+                .right-section{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+@import '../../Style/mixins';
+
+
+.horizon-container{
+     display: flex;
+     justify-content: space-between;
+     padding: 20px;
+
+     @include respond-to('mobile'){
+        display: block;
+        padding: 0px 20px 40px 20px;
+     }
+
+    .left-section {
+        max-width: 50%;
+
+        @include respond-to('mobile'){
+            max-width:100% ;
+         }
+        
+        .left-section-wrapper {
+          .image-area {
+            display: flex;
+            gap: 2px;
+            max-width: 500px;
+            
+            .img-1 {
+              margin-right:8px;
+              margin-top: 80px;
+              
+              img {
+                width: 100%;
+              }
+            }
+            
+            .img-2 {
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      
+      .right-section {
+        max-width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond-to('mobile'){
+            max-width:100% ;
+         }
+      
+        .right-section-wrapper {
+          
+          // Row 1: Title
+          .content-row-1 {
+            margin-bottom: 20px;
+      
+            @include respond-to('mobile'){
+              margin-top: 40px
+            }
+            .horizon-title {
+              @include font(40px, 600, rgba(38, 52, 56, 0.75));
+              @include respond-to('mobile'){
+                @include font(32px, 600, rgba(38, 52, 56, 0.75));
+              }
+            }
+          }
+      
+          // Row 2: Sub-content
+          .content-row-2 {
+            max-width: 600px;
+            margin-bottom: 40px;
+
+            @include respond-to('mobile'){
+              margin-bottom: 0px;
+
+            }
+      
+            .horizon-sub-content {
+              @include font(20px, 400, rgba(38, 52, 56, 0.75));
+            }
+          }
+      
+          // Row 3: Future content, space for more items
+          .content-row-3 {
+            // You can add styling here for future content
+          }
+        }
+      }
+}
+

@@ -1,0 +1,92 @@
+@import '../../Style/mixins';
+@import '../../Style/variables';
+
+.header-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: white;
+  @include font(16px, 700, rgba(35, 44, 43, 0.50));
+}
+
+.header-container.hidden {
+  transform: translateY(-100%);
+}
+
+.header-container.visible {
+  transform: translateY(0);
+}
+
+.header-container.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.login-link-text {
+  @include font(16px, 700, $primary-button-font);
+}
+
+
+.active {
+  color: black;
+  border-bottom: 3px solid $primary-button;
+
+
+}
+
+
+.burger-logo-wrapper{
+  padding: 1rem 1rem 1rem 0rem;
+}
+.mobile-secondary-anchor-btn{
+  padding: 1rem 0rem 1rem 1rem;
+}
+
+
+@include respond-to('mobile') {
+.burger-menu-container {
+  padding: 40px;
+
+  .burger-menu-list-container-wrapper {
+
+    .burger-menu-list-parent {
+      overflow-y: auto;
+
+  
+
+        .active {
+          @include font(20px, 800, black);
+          border-bottom: none;
+          position: relative; 
+
+          &::after {
+            content: url('/Assets/images/aiDoctor/ai-stars-blue.png');
+            position: absolute;
+            padding-left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: auto;
+          }
+        }
+      
+
+
+      li {
+        padding: 20px 0;
+        width: 100%;
+        a{
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+
+    }
+
+
+  }
+}
+}

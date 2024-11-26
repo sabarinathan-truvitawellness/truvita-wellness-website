@@ -1,0 +1,163 @@
+@import '../../Style/mixins';
+
+
+.footer {
+  background-color: #022b3a;
+  color: white;
+  padding: 48px 0;
+  margin-top: 40px;
+
+  .footer-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr; 
+    padding: 0 20px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+.contact-info{
+  .footer-heading{
+    margin-top: 40px !important;
+    @include respond-to('mobile'){
+     margin-top: 0;
+   }
+  }
+ 
+}
+
+.follow-us{
+  margin-top: 40px !important;
+  @include respond-to('mobile'){
+   margin-top: 0;
+ }
+}
+
+  .footer-section {
+    .footer-heading {
+      font-size: 18px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #00c0ff;  /* Cyan color */
+      // @include respond-to('')
+      @include respond-to('mobile'){
+        margin-top: 40px;
+      }
+    }
+    .footer-contact {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+
+      .footer-icon {
+        margin-right: 8px;
+      }
+
+      .footer-link {
+        color: #00c0ff;  /* Cyan color */
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #00a0cc;  /* Slightly darker cyan on hover */
+        }
+      }
+    }
+
+    .footer-address {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 15px;
+
+        .footer-link {
+          color: white;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #00c0ff;  /* Cyan color */
+          }
+        }
+      }
+    }
+
+  }
+
+  .newsletter-section {
+    .MuiFormControl-root{
+      margin-top: 0;
+    }
+    .MuiInputLabel-root{
+      color: azure;
+      top:2px;
+    }
+    .input-newsletter {
+      border-radius: 25px;
+      padding: 29px 5px;
+      height: 50px; 
+      background: rgba(234, 228, 228, 0.25);
+
+      & .MuiOutlinedInput-notchedOutline {
+        border-radius: 25px; 
+        border: 3px solid rgba(240, 237, 237, 0.15);
+        background: transparent;
+      }
+
+      & input {
+        padding: 10px 5px;
+        background: transparent;
+      }
+    }
+
+    .newsletter-submit {
+      background-color: #00c0ff;  /* Cyan color */
+      color: white;
+      border-radius: 25px;
+      padding: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #00a0cc;  
+      }
+    }
+
+    .footer-social-icons {
+      display: flex;
+      gap: 16px;
+
+      .footer-link {
+        color: #00c0ff;  /* Cyan color */
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #00a0cc;  
+        }
+      }
+    }
+  }
+
+  .footer-section-privacy-container{
+    padding-top: 40px;
+       display: flex;
+       gap: 20px;
+  
+       .footer-section-link-img{
+      
+         @include respond-to('mobile'){
+            margin-bottom: 20px;
+         }
+       }
+      
+  }
+}

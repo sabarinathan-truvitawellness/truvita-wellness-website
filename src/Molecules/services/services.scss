@@ -1,0 +1,70 @@
+
+@import '../../Style/mixins';
+
+.services-section {
+    padding: 100px 20px 80px 20px;
+    text-align: center;
+
+    @include respond-to('mobile'){
+      padding: 40px 20px 80px 20px;
+    }
+}
+
+// Modify card layout for mobile view
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  @include respond-to('mobile') {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 10px;
+    
+    .service-card {
+      @include respond-to('mobile') {
+        &:nth-child(3) {
+          grid-column: 1 / -1; 
+        }
+      }
+     
+    }
+  }
+
+  .service-card {
+
+    @include respond-to('mobile') {
+      width: 100%; 
+    }
+
+
+    @include respond-to('mobile') {
+      &:nth-child(3) {
+        width: 100%; 
+      }
+    }
+   
+  }
+}
+
+
+  // Title styling
+  .services-title {
+    padding-bottom: 40px;
+
+    @include respond-to('mobile'){
+      font-size: 32px;
+    }
+
+     @include respond-to('mobile'){
+      padding-bottom: 20px;
+     }
+    // Include mixin for title font
+    @include font(32px, 500, #30474D);
+
+    // Style for the highlighted part of the title
+    span {
+      @include font(32px, 500, #0FC0ED);
+    }
+  }

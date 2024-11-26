@@ -1,0 +1,16 @@
+.date-picker {
+    width: 100%; // Adjust as necessary
+    border-radius: 25px;
+
+    & .MuiOutlinedInput-notchedOutline {
+        border-radius: 25px; // For rounded corners
+    }
+
+    & .MuiInputAdornment-root {
+        margin-right: 8px; // Space between icon and input
+    }
+}
+
+.MuiInputBase-root{
+    border-radius: 25px;
+}

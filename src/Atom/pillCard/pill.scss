@@ -1,0 +1,46 @@
+// .pill-card {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-end; // Keep the content at the bottom
+//     // align-items: center;
+//     margin: 20px;
+//     padding: 0;
+//     border-radius: 30px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//     width: 350px;
+//     height: 150px;
+//     position: relative;
+//     overflow: hidden;
+//     color: white;
+//     text-align: center;
+//     background-size: cover;
+//     background-position: center;
+//   }
+  
+//   .blur-effect {
+//     width: 100%;
+//     height: 50%; // The blur covers the bottom half
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     border-radius: 0px 0px 30px 30px;
+//     background: rgba(124, 124, 139, 0.25);
+//     filter: blur(6px); // Stronger blur effect
+//     backdrop-filter: blur(6px);
+//     z-index: 1; // This stays below the text
+//   }
+  
+//   .text-area {
+//     position: absolute; // Text is positioned separately
+//     bottom: 0px; // Pushed to the bottom but above the blur
+//     z-index: 2; // Ensure it's on top of the blur
+//     margin: 0;
+//     font-size: 1.2rem;
+//     font-weight: lighter;
+//     text-align: center;
+//     width: 100%; // Ensure the text spans the width of the card
+//     padding: 10px;
+//     background: rgba(0, 0, 0, 0.3); // Optional: add a slight background for better readability
+//     border-radius: 0 0 30px 30px;
+//   }
+  

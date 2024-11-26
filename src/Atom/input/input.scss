@@ -1,0 +1,43 @@
+@import '../../Style/variables';
+@import '../../Style/mixins';
+
+
+.inputField {
+    border-radius: 25px;
+    padding: 5px 12px;
+    height: 50px; 
+    background: transparent;
+    & .MuiOutlinedInput-notchedOutline {
+      border-radius: 25px; 
+      border: solid 2px $input-border;
+      background: transparent;
+    }
+  
+    & input {
+      padding: 10px 5px; 
+      line-height: normal; 
+      background: transparent;
+    }
+  }
+  
+  .form-control-register {
+    .MuiInputLabel-root {
+      color: gray; 
+    }
+  
+
+    .Mui-focused {
+      color: gray !important; 
+    }
+  }
+
+  .form-control-register-dirty{
+    & .Mui-focused {
+      color: red !important;
+    }
+  }
+
+  .helper-text {
+    color: red;
+    font-size: 0.875rem;
+  }

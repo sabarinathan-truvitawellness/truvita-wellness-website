@@ -1,0 +1,157 @@
+
+
+
+// .cfs-container-wrapper {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//   }
+  
+//   .cfs-form-container-wrapper, .cfs-cards {
+//     flex: 1;
+//   }
+  
+//   .cfs-form-container-wrapper {
+//     display: flex;
+//     justify-content: center;
+//   }
+  
+//   .cfs-cards {
+//     .values-grid {
+//       display: grid;
+//       grid-template-columns: repeat(2, 1fr);
+//         gap: 20px;
+//       }
+//   }
+  
+
+
+//   //card styling 
+
+//   .core-values-section {
+//     padding: 20px;
+//     text-align: center;
+    
+//     .section-title {
+//       font-size: 32px;
+//       font-weight: 600;
+//       color: #0DB1DB;
+//       margin-bottom: 30px;
+//     }
+
+  
+//     .value-card {
+//       background-color: #EAF8FC;
+//       padding: 20px;
+//       border-radius: 15px;
+//       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//       text-align: left;
+  
+//       .icon {
+//         font-size: 30px;
+//         margin-bottom: 15px;
+//       }
+  
+//       .title {
+//         font-size: 24px;
+//         font-weight: 600;
+//         color: #0DB1DB;
+//         margin-bottom: 10px;
+//       }
+  
+//     }
+//   }
+  
+@import '../../Style//mixins';
+
+
+// flex justify-between items-center gap-20
+
+.cfs-container-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .section-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20;
+    padding: 0 20px;
+
+    @include respond-to('mobile'){
+      display: block;
+    }
+  }
+}
+
+.cfs-form-container-wrapper,
+.cfs-cards {
+  flex: 1;
+}
+
+.cfs-form-container-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 50%;
+  @include respond-to('mobile'){
+    display: block;
+    max-width: 100%;
+  }
+
+}
+
+.cfs-cards {
+  max-width: 50%;
+
+  @include respond-to('mobile'){
+    max-width: 100%;
+  }
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  // Creates a two-column grid
+    gap: 20px;  // Adds spacing between the grid items
+
+    @include respond-to('mobile'){
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+// Card styling
+.core-values-section {
+  padding: 20px;
+  text-align: center;
+
+  .section-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0DB1DB;  // Brand color for the section title
+    margin-bottom: 30px;
+  }
+
+  .value-card {
+    background-color: #EAF8FC;  // Light blue background for cards
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  // Soft shadow for depth
+    text-align: left;  // Align text to the left inside the cards
+
+    .icon {
+      font-size: 30px;  // Large icon size
+      margin-bottom: 15px;  // Spacing between icon and title
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #0DB1DB;  // Brand color for the titles inside the cards
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 16px;
+      font-weight: 400;
+      color: #333;  // Darker color for text descriptions
+    }
+  }
+}

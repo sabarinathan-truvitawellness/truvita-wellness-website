@@ -1,0 +1,45 @@
+@import '../../Style/mixins';
+
+.ai-doc-card {
+    border: 2px solid gray;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+
+    .ai-doc-wrapper {
+
+        .ai-doc-content {
+            .card-title {
+                margin-bottom: 20px;
+                @include font(24px, 700, #3375D8);
+
+                @include respond-to('mobile') {
+                    color: #3375D8;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+
+            .ai-doc-paragraph {
+                margin-top: 10px;
+                @include font(20px, 400, rgba(53, 61, 74, 0.75));
+
+                @include respond-to('mobile') {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                .ai-doc-cardSubHeading {
+                    @include font(20px, 500, #3375D8)
+                }
+            }
+
+        }
+    }
+}

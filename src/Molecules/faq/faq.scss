@@ -1,0 +1,15 @@
+@import '../../Style//mixins';
+
+// bg-white py-10 pt-[80px] max-w-[1000px] m-auto
+
+.faq-container-wrapper{
+    background-color: white;
+    padding: 80px 0 0 0;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @include respond-to('tablet'){
+        padding-left:20px;
+        padding-right:20px ;
+    }
+}

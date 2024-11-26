@@ -1,0 +1,45 @@
+.core-values-section {
+    padding: 50px 20px;
+    text-align: center;
+    
+    .section-title {
+      font-size: 32px;
+      font-weight: 600;
+      color: #0DB1DB;
+      margin-bottom: 30px;
+    }
+  
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .value-card {
+      background-color: #EAF8FC;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+  
+      .icon {
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+  
+      .title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #0DB1DB;
+        margin-bottom: 10px;
+      }
+  
+      .description {
+        font-size: 16px;
+        color: #555;
+      }
+    }
+  }
+  

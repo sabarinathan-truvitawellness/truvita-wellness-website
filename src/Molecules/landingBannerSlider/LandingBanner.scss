@@ -1,0 +1,21 @@
+
+
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;  // Make sure each card has equal height
+    height: auto;  // Cards will adapt to the tallest one
+  }
+
+  .slick-track {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .slider-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }

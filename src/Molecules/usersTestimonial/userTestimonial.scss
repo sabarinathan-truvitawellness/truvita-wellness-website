@@ -1,0 +1,30 @@
+// userTestimonial.scss
+@import '../../Style/mixins';
+
+.testimonial-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+  .testimonial-slider-title{
+    .testimonial-slider-title-content{
+         @include font(32px,600,rgba(35, 44, 43, 0.75))
+    }
+  }
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;  // Make sure each card has equal height
+    height: auto;  // Cards will adapt to the tallest one
+  }
+
+  .slick-track {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .testimonial-slide {
+    display: flex;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}

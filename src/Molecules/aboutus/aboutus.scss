@@ -1,0 +1,93 @@
+@import '../../Style/mixins'; // Assuming you have mixins and variables to import for breakpoints and styles.
+@import '../../Style/variables';
+
+.aboutus-container {
+    padding: 40px;
+    // @include response-to('mobile'){
+    //   padding: 20px;  
+    // }
+    @include respond-to('mobile'){
+        padding: 20px; 
+    }
+    
+    .aboutus-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .content-section {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+
+      @include respond-to('mobile'){
+        display: block;
+      }
+  
+      .left-section {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        @include respond-to('mobile'){
+            width: 100%;
+        }
+        .left-section-wrapper {
+            @include respond-to('mobile'){
+                margin-bottom: 40px;
+            }
+          .content-row-1 {
+            .about-content-1 {
+              @include font(24px,600,#0FC0ED);
+              margin-bottom: 12px;
+            }
+          }
+  
+          .content-row-2 {
+            max-width: 600px;
+           .about-content-2 {
+              text-align: left;
+              margin-bottom: 40px;
+              @include font(32px,700,#232C2B)
+            }
+          }
+  
+          .content-row-3 {
+            max-width: 500px;
+            .about-content-3 {
+              // font-size: 18px;
+              // font-weight: 400;
+              @include font(20px,400,#232C2B)
+            }
+          }
+        }
+      }
+  
+      .right-section {
+        width: 50%;
+        .right-section-wrapper {
+          display: flex;
+          gap: 16px;
+  
+          .sub-section-left, .sub-section-right {
+            display: flex;
+            flex-direction: column;
+  
+            img {
+              width: 100%;
+            }
+  
+            .sub-section-wr-top,
+            .sub-section-wr-bottom {
+              margin-bottom: 16px;
+            }
+          }
+        }
+        @include respond-to('mobile'){
+            width: 100%;
+        }
+      }
+    }
+  }
+  

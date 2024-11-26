@@ -1,0 +1,170 @@
+@import '../../Style/mixins';
+@import '../../Style/variables';
+@import '../../Style/mixins';
+
+
+.ai-doctor-section {
+  background-color: #022b3a;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+@include respond-to('mobile'){
+  padding-top: 40px;
+  margin-bottom: 0px;
+}
+
+  /* Hero Section */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #014254;
+    border-radius: 24px;
+    padding: 16px 32px;
+    height: 400px;
+
+    @media (min-width: 769px) {
+      flex-direction: row;
+    }
+
+    @include respond-to('mobile'){
+        height: 100%;
+        display: block;
+        flex-direction: row;
+    }
+
+    .text-section {
+      flex: 1;
+      margin-bottom: 32px;
+
+      @media (min-width: 1024px) {
+        margin-bottom: 0;
+      }
+
+      .ai-doctor-title {
+        font-size: 48px;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 16px;
+
+        @include respond-to('mobile'){
+          font-size: 40px;
+        }
+        .gradient-text {
+          font-size: 64px;
+          font-weight: bold;
+          background: linear-gradient(90deg, #0DB1DB -9.07%, #0AA866 29.04%, #8C53C4 65.34%, #0DB1DB 103.91%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          @include respond-to('mobile'){
+            font-size: 40px;
+          }
+        }
+        .gradient-text::after{
+          content: url('/Assets/images/aiDoctor/robot-starts.png'); // Adjust path based on SCSS file location
+          padding-left: 20px;
+          width: 18px;
+          height: auto;
+        }
+      }
+
+   
+
+     
+
+      .ai-doctor-description {
+        font-size: 18px;
+        color: #b0c7d4;
+      }
+
+
+      .learn-more-button {
+        background-color: #00c0ff;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 9999px;
+        transition: background-color 0.3s ease;
+        margin-top: 36px;
+        width: 136px;
+
+
+        &:hover {
+          background-color: #00a0cc;
+        }
+      }
+    }
+
+    .image-section {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        position: relative; // Default for larger screens
+      
+        @include respond-to('mobile') {
+          position: static; // Remove the relative position in mobile view
+        }
+      
+        .ai-robot-image {
+          display: flex;
+          justify-content: flex-end;
+          position: absolute;
+          bottom: -199px;
+          right: 0;
+          width: 100%;
+      
+          @include respond-to('mobile') {
+            position: static; // Remove the absolute position in mobile view
+            bottom: auto; // Reset bottom value
+            right: auto;  // Reset right value
+          }
+        }
+      }
+      
+  }
+
+  /* Features Section */
+  .features-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 48px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .feature-card {
+      background-color: #014254;
+      border-radius: 16px;
+      padding: 24px;
+
+      .feature-image {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 16px;
+      }
+
+      .feature-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: white;
+
+        @include respond-to('mobile'){
+          font-size: 20px;
+        }
+      }
+
+      .feature-description {
+        font-size: 16px;
+        font-weight: 400;
+        color: #b0c7d4;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+

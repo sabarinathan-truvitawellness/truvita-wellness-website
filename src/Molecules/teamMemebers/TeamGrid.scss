@@ -1,0 +1,91 @@
+@import '../../Style//mixins';
+
+.team-grid-section {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    .team-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #0DB1DB;
+      margin-bottom: 20px;
+    }
+  
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+
+      @include respond-to('mobile'){
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        padding: 20px;
+      }
+  
+      .team-member-card {
+        position: relative;
+        // width: 300px;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .member-photo {
+        position: relative;
+        height: 100%;
+      }
+      
+      .team-photo {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      
+      .member-photo::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        box-shadow: rgba(28, 27, 27, 0.8) 0px -90px 20px -25px inset;
+        z-index: 1; 
+      }
+      
+      .member-info {
+        position: absolute;
+        bottom: 5px; /* Position text at the bottom of the image */
+        left: 20px;
+        z-index: 2; /* Ensure text is above the gradient */
+        color: white;
+        text-align: left;
+      }
+      
+      .member-name {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+        @include respond-to('mobile'){
+          font-size: 16px;
+        }
+      }
+      
+      .member-title {
+        font-size: 16px;
+        margin: 5px 0 0;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+        @include respond-to('mobile'){
+          font-size: 12px;
+        }
+      }
+      
+      /* Optional: Add hover effect */
+      .team-member-card:hover .member-photo::after {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%); /* Darken gradient on hover */
+      }
+      
+    }
+  }
+  

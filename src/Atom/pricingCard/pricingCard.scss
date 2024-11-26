@@ -1,0 +1,82 @@
+@import '../../Style/mixins';
+
+.plan-card {
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto; // Ensure all cards have the same height
+
+    @include respond-to('mobile') {
+        // margin-bottom: 20px;
+    }
+
+    &.premium {
+        background-color: #003c65;
+        color: #fff;
+    }
+
+    .plan-card-title-section {
+        display: flex;
+        justify-content: space-between;
+
+        @include respond-to('mobile') {
+            display: block;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        p span {
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        .offer-price{
+            text-decoration: line-through;
+            color: rgb(221, 219, 219);
+            font-size: 20px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    li span {
+        color: #00c0ff;
+        margin-right: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        border-radius: 25px;
+        background-color: #00c0ff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-top: auto; // Ensure button sticks to the bottom
+    }
+}
